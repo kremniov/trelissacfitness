@@ -1,0 +1,76 @@
+/* Gallery Section */
+.gallery-section {
+    background-color: var(--white);
+    padding: 60px 0;
+    overflow: hidden;
+}
+
+.gallery-slider {
+    margin: 0;
+    width: 100%;
+}
+
+.gallery-slider .slick-slide {
+    margin: 0;
+    padding: 0;
+}
+
+.gallery-slider img {
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Navigation arrows */
+.gallery-slider .slick-prev,
+.gallery-slider .slick-next {
+    width: 40px;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    transition: background 0.3s ease;
+}
+
+.gallery-slider .slick-prev:hover,
+.gallery-slider .slick-next:hover {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.gallery-slider .slick-prev {
+    left: 0;
+}
+
+.gallery-slider .slick-next {
+    right: 0;
+}
+
+.gallery-slider .slick-prev:before,
+.gallery-slider .slick-next:before {
+    content: "";
+    display: block;
+    width: 24px;
+    height: 24px;
+    opacity: 0.7;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.gallery-slider .slick-prev:before {
+    background-image: url('../images/icons/chevron-left.svg');
+}
+
+.gallery-slider .slick-next:before {
+    background-image: url('../images/icons/chevron-right.svg');
+}
+
+/* Hide dots */
+.gallery-slider .slick-dots {
+    display: none !important;
+}
+
+@media (max-width: 991px) {
+    .gallery-slider img {
+        height: 300px;
+    }
+}
