@@ -94,24 +94,95 @@
     background-size: 40px;
 }
 
-.contact-info li.address {
-    background-image: url('../images/icons/address.svg');
-}
-
-.contact-info li.phone {
-    background-image: url('../images/icons/phone.svg');
-}
-
-.contact-info li.email {
-    background-image: url('../images/icons/email.svg');
-}
-
 .contact-info a {
     text-decoration: none;
 }
 
 .contact-info a:hover {
     color: var(--primary-color);
+}
+
+
+.icon-svg, .icon-clock, .icon-social, .icon-mobile, .icon-social-mobile {
+    width: 100%;
+    height: 100%;
+    transition: fill 0.3s ease;
+}
+
+.contact-info li {
+    padding-left: 60px;
+    margin-bottom: 20px;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.contact-info li svg {
+    position: absolute;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    fill: var(--primary-color);
+}
+
+.hours-container {
+    position: relative;
+    padding-left: 60px;
+    margin-bottom: 20px;
+}
+
+.icon-clock {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 40px;
+    height: 40px;
+    fill: var(--primary-color);
+}
+
+.social-links a {
+    display: inline-block;
+    margin-right: 15px;
+    width: 30px;
+    height: 30px;
+}
+
+.icon-social {
+    fill: var(--primary-color);
+}
+
+.icon-social:hover {
+    fill: var(--white);
+}
+
+.contact-icon {
+    flex: 0 0 40px;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-mobile {
+    width: 24px;
+    height: 24px;
+    fill: var(--primary-color);
+}
+
+.social-links-mobile a {
+    display: inline-block;
+    margin-right: 15px;
+    width: 26px;
+    height: 26px;
+}
+
+.icon-social-mobile {
+    fill: var(--primary-color);
+}
+
+.icon-social-mobile:hover {
+    fill: var(--secondary-color);
 }
 
 .hours-container {
@@ -140,7 +211,7 @@
     width: 18px;
     height: 18px;
     background-color: var(--primary-color);
-    color: var(--text-color);
+    color: var(--white);
     border-radius: 50%;
     text-align: center;
     line-height: 18px;
