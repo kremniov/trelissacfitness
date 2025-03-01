@@ -195,7 +195,7 @@
 }
 
 .title-hours {
-    font-family: 'Gotham', Arial, sans-serif;
+    font-family: 'Montserrat', Arial, sans-serif;
     font-size: 16px;
     font-weight: 700;
     margin-bottom: 5px;
@@ -374,7 +374,7 @@
 }
 
 .title-hours-mobile {
-    font-family: 'Gotham', Arial, sans-serif;
+    font-family: 'Montserrat', Arial, sans-serif;
     font-size: 15px;
     font-weight: 700;
     color: var(--secondary-color);
