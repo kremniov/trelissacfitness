@@ -392,17 +392,7 @@ ul {
     color: var(--primary-color);
 }
 
-@media (max-width: 767px) {
-    .services-list li,
-    .highlights-list li {
-        width: 50%;
-    }
-
-    .practical-info-list li {
-        width: 50%;
-    }
-
-    .presentation-section h2,
+@media (max-width: 992px) {
     .faq-section h2,
     .why-us-section h2 {
         font-size: 24px;
@@ -422,15 +412,6 @@ ul {
 
     .footer-links h4 {
         margin-top: 30px;
-    }
-}
-
-@media (max-width: 575px) {
-
-    .services-list li,
-    .highlights-list li,
-    .practical-info-list li {
-        width: 100%;
     }
 
     .legal-links li {
