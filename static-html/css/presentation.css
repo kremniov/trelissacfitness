@@ -95,8 +95,9 @@
 
 /* Highlights Section */
 .highlights-list div {
-    background-color: var(--primary-color);
-    color: var(--white);
+    background-color: var(--cta-blue);
+    font-weight: 500;
+    /*color: var(--white);*/
 }
 
 .small-text {

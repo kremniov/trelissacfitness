@@ -292,7 +292,7 @@
 }
 
 .btn-hero-cta {
-    background-color: var(--primary-color);
+    background-color: var(--cta-yellow);
     color: var(--bs-black);
     font-size: 16px;
     font-weight: 700;
@@ -302,6 +302,7 @@
     display: inline-block;
     transition: all 0.3s ease;
     text-decoration: none;
+    z-index: 2;
 }
 
 .btn-hero-cta:hover {
@@ -434,12 +435,6 @@
 .btn-planning-mobile:hover {
     background-color: var(--primary-color);
     color: var(--secondary-color);
-}
-
-/* Mobile CTA Section */
-.mobile-cta-section {
-    text-align: center;
-    margin: 20px 0 0;
 }
 
 /* Media Queries */
