@@ -8,6 +8,10 @@
     --white: #ffffff;
 }
 
+.color-primary {
+    color: var(--primary-color);
+}
+
 body {
     font-family: 'Noto Sans', sans-serif;
     font-optical-sizing: auto;

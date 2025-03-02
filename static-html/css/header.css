@@ -26,6 +26,7 @@
     color: var(--white);
     font-size: 30px;
     font-weight: 600;
+    font-variation-settings: 'wdth' 0.75;
     line-height: 30px;
     white-space: nowrap;
     margin-left: 5px;
@@ -184,7 +185,7 @@
     }
 
     .site-title {
-        font-size: 16px;
+        font-size: 24px;
         overflow: hidden;
         text-overflow: ellipsis;
     }
