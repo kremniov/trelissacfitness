@@ -36,7 +36,7 @@
 /* Image container */
 .option-image {
     width: 100%;
-    height: 270px;
+    height: 307px;
     overflow: hidden;
 }
 
@@ -135,14 +135,15 @@
 }
 
 /* Media Queries */
-@media (max-width: 991px) {
+@media (max-width: 992px) {
     .options-section h2 {
         font-size: 24px;
     }
 
     .option-item {
         margin: 0 10px;
-        height: 550px; /* Hauteur légèrement réduite sur mobile */
+        height: 600px; /* Hauteur légèrement réduite sur mobile */
+        width: 320px;
     }
 
     .option-text {
@@ -155,9 +156,5 @@
 
     .options-slider .slick-next {
         right: 10px;
-    }
-
-    .option-image {
-        height: 220px;
     }
 }

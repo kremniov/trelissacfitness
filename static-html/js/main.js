@@ -182,7 +182,7 @@ function initOptionsSlider() {
     if ($('.options-slider').length) {
         if (!$('.options-slider').hasClass('slick-initialized')) {
             $('.options-slider').slick({
-                dots: true,
+                dots: false,
                 arrows: true,
                 autoplay: false,
                 infinite: true,
@@ -190,6 +190,7 @@ function initOptionsSlider() {
                 slidesToScroll: 1,
                 adaptiveHeight: false,
                 isAdaptiveWidth: false,
+                centerMode: true,
                 responsive: [
                     {
                         breakpoint: 992,
