@@ -18,10 +18,17 @@
     padding: 40px 0;
 }
 
+.hero-logo {
+    width: 200px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+
 .hero-section h1 {
-    font-size: 48px;
+    font-size: 36px;
     line-height: 1.2;
-    margin-bottom: 20px;
+    margin: 20px auto;
     text-transform: uppercase;
     font-style: italic;
     color: var(--white);
@@ -442,6 +449,10 @@
     .hero-section {
         height: auto;
         padding: 40px 0;
+    }
+
+    .hero-logo {
+        width: 150px;
     }
 
     .hero-background {

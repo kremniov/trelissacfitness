@@ -4,13 +4,13 @@
     padding: 20px 0;
 }
 
-.presentation-section h2 {
+.presentation-section h1 {
     font-size: 28px;
     line-height: 1.2;
     margin-bottom: 20px;
 }
 
-.presentation-section h2 strong {
+.presentation-section h1 strong {
     color: var(--primary-color);
 }
 
