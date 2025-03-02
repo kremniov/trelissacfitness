@@ -86,7 +86,7 @@
 }
 .btn-inscription {
     background-color: var(--cta-yellow);
-    color: var(--secondary-color);
+    color: var(--white);
     font-size: 14px;
     text-transform: uppercase;
     padding: 8px 16px;
