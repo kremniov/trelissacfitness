@@ -24,8 +24,7 @@
 
 .site-title {
     color: var(--white);
-    font-family: 'Montserrat', Arial, sans-serif;
-    font-size: 20px;
+    font-size: 30px;
     font-weight: 600;
     line-height: 30px;
     white-space: nowrap;
@@ -48,7 +47,6 @@
 
 .nav-menu a {
     color: var(--white);
-    font-family: 'Montserrat', Arial, sans-serif;
     font-size: 14px;
     text-transform: uppercase;
 }
@@ -157,7 +155,6 @@
 
 .notification-banner p {
     margin: 0;
-    font-family: 'Montserrat', Arial, sans-serif;
     font-size: 11px;
     font-weight: 500;
 }
