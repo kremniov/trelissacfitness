@@ -279,9 +279,7 @@ ul {
 
 /* Why Us Section */
 .why-us-section {
-    background-image: url('../images/why-us-bg.jpg');
-    background-size: cover;
-    background-position: top;
+    background: linear-gradient(#0D324B, #000000);
     padding: 60px 0;
     color: var(--white);
 }
