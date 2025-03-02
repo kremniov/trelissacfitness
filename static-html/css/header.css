@@ -145,12 +145,16 @@
 
 /* Notification Banner */
 .notification-banner {
+    display: block;
     background-color: var(--cta-blue);
     color: var(--secondary-color);
     padding: 8px 0;
     text-align: center;
     position: relative;
     width: 100%;
+}
+.notification-banner:hover {
+    color: var(--secondary-color);
 }
 
 .notification-banner p {
