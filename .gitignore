@@ -9,3 +9,5 @@ venv/
 stuff/
 src/
 #!src/wp-content/themes/trelissacfitness
+.claudesync/
+knowledge-base/
