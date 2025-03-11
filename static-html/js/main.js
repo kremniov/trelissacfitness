@@ -18,6 +18,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Initialize tooltips
     initTooltips();
+
+    // Initialize cookie banner
+    initCookieBanner();
+
 });
 
 /**
@@ -217,3 +221,48 @@ $(document).ready(function() {
         initOptionsSlider();
     });
 });
+
+/**
+ * Initialize cookie banner functionality
+ */
+function initCookieBanner() {
+    // Get cookie banner elements
+    const cookieBanner = document.getElementById('cookie-banner');
+    const acceptButton = document.getElementById('cookie-accept');
+    const declineButton = document.getElementById('cookie-decline');
+
+    // Check if user has already made a choice
+    if (!getCookie('cookieConsent')) {
+        // Show the banner with a slight delay for better UX
+        setTimeout(function() {
+            cookieBanner.classList.add('show');
+        }, 1000);
+    }
+
+    // Handle accept button click
+    if (acceptButton) {
+        acceptButton.addEventListener('click', function() {
+            setCookie('cookieConsent', 'accepted', 365); // Store for 1 year
+            hideBanner();
+
+            // Here you can initialize your analytics or other cookie-dependent code
+            // For example: initializeAnalytics();
+        });
+    }
+
+    // Handle decline button click
+    if (declineButton) {
+        declineButton.addEventListener('click', function() {
+            setCookie('cookieConsent', 'declined', 365); // Store for 1 year
+            hideBanner();
+
+            // Optionally disable any tracking if user declined
+            // For example: disableTracking();
+        });
+    }
+
+    // Function to hide the banner with animation
+    function hideBanner() {
+        cookieBanner.classList.remove('show');
+    }
+}
