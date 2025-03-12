@@ -1,0 +1,265 @@
+/**
+ * Styles pour le popup du planning - Trélissac Fitness
+ * Version finale alignée sur le PDF
+ */
+
+/* Planning Popup Styles */
+.planning-popup-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(41, 41, 46, 0.9);
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+    padding: 15px;
+}
+
+.planning-popup {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 1000px;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+}
+
+.planning-header {
+    padding: 20px;
+    background: linear-gradient(to right, #7391c5, #0D324B);
+    color: #ffffff;
+    position: relative;
+    border-radius: 8px 8px 0 0;
+    text-align: left;
+}
+
+.planning-title {
+    color: #ffffff;
+    text-align: left;
+    font-size: 42px;
+    font-weight: 700;
+    margin: 0;
+    text-transform: uppercase;
+    line-height: 1.1;
+}
+
+.planning-subtitle {
+    color: #ffffff;
+    text-align: left;
+    font-size: 24px;
+    margin: 5px 0 0 0;
+    text-transform: uppercase;
+}
+
+.planning-included {
+    color: #ffffff;
+    text-align: left;
+    font-size: 16px;
+    margin: 10px 0 0 0;
+    text-transform: uppercase;
+}
+
+.planning-logo {
+    position: absolute;
+    top: 20px;
+    right: 60px;
+    max-width: 60px;
+    height: auto;
+}
+
+.planning-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: none;
+    color: #ffffff;
+    font-size: 24px;
+    line-height: 1;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.planning-close:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.planning-content {
+    padding: 0;
+}
+
+.planning-table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.planning-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 0;
+}
+
+.planning-table th {
+    background-color: #7391c5;
+    color: #ffffff;
+    text-align: center;
+    padding: 12px 8px;
+    font-weight: 600;
+    font-size: 18px;
+    border: 1px solid #5a7ab3;
+    text-transform: uppercase;
+}
+
+.planning-table td {
+    padding: 0;
+    border: 1px solid #5a7ab3;
+    text-align: center;
+    vertical-align: top;
+    height: 80px;
+    background-color: #7391c5;
+    position: relative;
+}
+
+.planning-table td.empty {
+    background-color: #7391c5;
+}
+
+.planning-class-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.planning-class-time {
+    background-color:var(--secondary-color);
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 5px;
+    width: 100%;
+}
+
+.planning-class-name {
+    font-weight: 600;
+    font-size: 16px;
+    padding: 10px 5px;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.planning-footer {
+    background-color: #7391c5;
+    padding: 15px;
+    color: #ffffff;
+    text-align: center;
+    font-size: 14px;
+    border-radius: 0 0 8px 8px;
+}
+
+.planning-contact {
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.planning-note {
+    font-style: italic;
+    margin-top: 5px;
+}
+
+.planning-buttons {
+    margin-top: 15px;
+}
+
+.planning-btn {
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: #4884D9;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.planning-btn:hover {
+    background-color: #29292E;
+    color: #ffffff;
+}
+
+.planning-btn-download {
+    background-color: var(--secondary-color);
+    margin-left: 10px;
+}
+
+.planning-btn-download:hover {
+    background-color: #4884D9;
+}
+
+/* Media Queries */
+@media (max-width: 992px) {
+    .planning-title {
+        font-size: 28px;
+    }
+
+    .planning-subtitle {
+        font-size: 18px;
+    }
+
+    .planning-included {
+        font-size: 14px;
+    }
+
+    .planning-logo {
+        max-width: 40px;
+    }
+
+    .planning-table th {
+        font-size: 16px;
+        padding: 8px 5px;
+    }
+
+    .planning-table td {
+        min-width: 120px;
+    }
+
+    .planning-class-time {
+        font-size: 12px;
+    }
+
+    .planning-class-name {
+        font-size: 14px;
+    }
+
+    .planning-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .planning-btn {
+        margin-bottom: 10px;
+    }
+
+    .planning-btn-download {
+        margin-left: 0;
+    }
+}

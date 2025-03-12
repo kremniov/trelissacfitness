@@ -22,6 +22,10 @@ document.addEventListener('DOMContentLoaded', function () {
     // Initialize cookie banner
     initCookieBanner();
 
+    createPlanningPopup();
+
+    initPlanningPopup();
+
 });
 
 /**
@@ -261,8 +265,224 @@ function initCookieBanner() {
         });
     }
 
-    // Function to hide the banner with animation
     function hideBanner() {
         cookieBanner.classList.remove('show');
     }
 }
+
+function createPlanningPopup() {
+    const popupContainer = document.createElement('div');
+    popupContainer.className = 'planning-popup-container';
+
+
+    popupContainer.innerHTML = `
+<div class="planning-popup">
+            <div class="planning-header">
+                <h2 class="planning-title">Planning</h2>
+                <h3 class="planning-subtitle">des cours collectifs coachés</h3>
+                <p class="planning-included">Compris dans l'abonnement Ultimate</p>
+                <img src="images/hero-logo-b.png" alt="Trélissac Fitness" class="planning-logo">
+                <button class="planning-close" onclick="closePlanningPopup()">&times;</button>
+            </div>
+            <div class="planning-content">
+                <div class="planning-table-container">
+                    <table class="planning-table">
+                        <thead>
+                            <tr>
+                                <th>Lundi</th>
+                                <th>Mardi</th>
+                                <th>Mercredi</th>
+                                <th>Jeudi</th>
+                                <th>Vendredi</th>
+                                <th>Samedi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Cours du matin/milieu de matinée -->
+                            <tr>
+                                <td class="empty"></td>
+                                <td class="empty"></td>
+                                <td class="empty"></td>
+                                <td class="empty"></td>
+                                <td class="empty"></td>
+                                <td>
+                                    <div class="planning-class-container">
+                                        <div class="planning-class-time">10h00 à 11h00</div>
+                                        <div class="planning-class-name">Zumba</div>
+                                    </div>
+                                </td>
+                            </tr>
+                            
+                            <!-- Cours du midi -->
+                            <tr>
+                                <td>
+                                    <div class="planning-class-container">
+                                        <div class="planning-class-time">12h15 à 13h00</div>
+                                        <div class="planning-class-name">Body Pump</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="planning-class-container">
+                                        <div class="planning-class-time">12h15 à 13h00</div>
+                                        <div class="planning-class-name">CAF</div>
+                                    </div>
+                                </td>
+                                <td class="empty"></td>
+                                <td>
+                                    <div class="planning-class-container">
+                                        <div class="planning-class-time">12h15 à 13h00</div>
+                                        <div class="planning-class-name">Body Sculpt</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="planning-class-container">
+                                        <div class="planning-class-time">12h15 à 13h00</div>
+                                        <div class="planning-class-name">Step</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="planning-class-container">
+                                        <div class="planning-class-time">11h00 à 12h00</div>
+                                        <div class="planning-class-name">Pilates</div>
+                                    </div>
+                                </td>
+                            </tr>
+                            
+                            <!-- Cours début de soirée 1 -->
+                            <tr>
+                                <td class="empty"></td>
+                                <td>
+                                    <div class="planning-class-container">
+                                        <div class="planning-class-time">18h00 à 19h00</div>
+                                        <div class="planning-class-name">HIIT</div>
+                                    </div>
+                                </td>
+                                <td class="empty"></td>
+                                <td class="empty"></td>
+                                <td class="empty"></td>
+                                <td class="empty"></td>
+                            </tr>
+                            
+                            <!-- Cours début de soirée 2 -->
+                            <tr>
+                                <td>
+                                    <div class="planning-class-container">
+                                        <div class="planning-class-time">18h00 à 19h00 | 18h15 à 19h00</div>
+                                        <div class="planning-class-name">Cross Training | Biking</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="planning-class-container">
+                                        <div class="planning-class-time">19h00 à 19h45</div>
+                                        <div class="planning-class-name">Step</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="planning-class-container">
+                                        <div class="planning-class-time">18h30 à 19h15</div>
+                                        <div class="planning-class-name">Strong Nation</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="planning-class-container">
+                                        <div class="planning-class-time">18h30 à 19h15</div>
+                                        <div class="planning-class-name">HIIT</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="planning-class-container">
+                                        <div class="planning-class-time">18h30 à 19h00</div>
+                                        <div class="planning-class-name">Strong Nation</div>
+                                    </div>
+                                </td>
+                                <td class="empty"></td>
+                            </tr>
+                            
+                            <!-- Cours de fin de soirée -->
+                            <tr>
+                                <td>
+                                    <div class="planning-class-container">
+                                        <div class="planning-class-time">19h00 à 19h30</div>
+                                        <div class="planning-class-name">Abdos Flash</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="planning-class-container">
+                                        <div class="planning-class-time">19h45 à 20h15</div>
+                                        <div class="planning-class-name">Body Pump</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="planning-class-container">
+                                        <div class="planning-class-time">19h00 à 20h00</div>
+                                        <div class="planning-class-name">Zumba</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="planning-class-container">
+                                        <div class="planning-class-time">19h15 à 19h45</div>
+                                        <div class="planning-class-name">Abdos Fessiers</div>
+                                    </div>
+                                </td>
+                                <td class="empty"></td>
+                                <td class="empty"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="planning-footer">
+                <div class="planning-note">La journée, lorsqu'il n'y a pas de cours collectifs, les cours virtuels sont à disposition</div>
+                <div class="planning-contact">Tél : 05 33 82 00 23</div>
+                <div class="planning-buttons">
+                    <a href="#" class="planning-btn" onclick="closePlanningPopup()">Fermer</a>
+                    <a href="docs/planning.pdf" class="planning-btn planning-btn-download" target="_blank">Télécharger le PDF</a>
+                </div>
+            </div>
+        </div>
+    `;
+
+    document.body.appendChild(popupContainer);
+}
+
+function initPlanningPopup() {
+    const planningLinks = document.querySelectorAll('.btn-planning, .btn-planning-mobile');
+
+    planningLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            openPlanningPopup();
+        });
+    });
+
+    const popupContainer = document.querySelector('.planning-popup-container');
+    if (popupContainer) {
+        popupContainer.addEventListener('click', function(e) {
+            if (e.target === this) {
+                closePlanningPopup();
+            }
+        });
+    }
+
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            closePlanningPopup();
+        }
+    });
+}
+
+function openPlanningPopup() {
+    const popupContainer = document.querySelector('.planning-popup-container');
+    if (popupContainer) {
+        popupContainer.style.display = 'flex';
+        document.body.style.overflow = 'hidden'; // Empêcher le défilement de la page
+    }
+}
+
+function closePlanningPopup() {
+    const popupContainer = document.querySelector('.planning-popup-container');
+    if (popupContainer) {
+        popupContainer.style.display = 'none';
+        document.body.style.overflow = ''; // Restaurer le défilement de la page
+    }
+};
